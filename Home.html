@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Movie Review By AJ</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<style>
+    .line {
+        fill: none;
+    }
+
+    /* Tooltip style */
+    #chartTooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 5px;
+        pointer-events: none;
+        z-index: 999;
+        /* Ensure the tooltip appears above the chart */
+    }
+
+    /* Vertical line style */
+    .vertical-line {
+        stroke: black;
+        stroke-width: 1px;
+        stroke-dasharray: 3 3;
+        /* Add a dashed pattern for the line */
+    }
+
+    /* Responsive tooltip styles */
+    @media (max-width: 768px) {
+        #chartTooltip {
+            /* Apply specific styles for small screens */
+            /* For example, you can decrease the font size for small screens */
+            font-size: 10px;
+        }
+    }
+</style>
+
+<body style="background-color:beige;color:darkolivegreen " class="w-full min-h-screen">
+
+    <div class="w-full pt-20 px-80 ">
+        <h1 class="w-full text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center">
+            <!-- add seperate color for Barbie and Oppenheimer -->
+
+            <span class="text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-pink-400">Barbie</span>
+            <span class="text-gray-400 text-md">or</span>
+            <span
+                class="text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-green-300">Oppenheimer</span>
+        </h1>
+        <p class="ex1 pt-10 mx-30">"Barbie" and "Oppenheimer" are two vastly different films, each exploring unique
+            themes and
+            captivating audiences in their own way. "Barbie" brings the beloved doll to life in a whimsical and magical
+            animated adventure, while "Oppenheimer" delves into the real-life complexities of the brilliant physicist
+            behind
+            the atomic bomb.
+        </p>
+        <p class="mt-5">
+            Let's explore the contrasts between these two compelling movies based on their search trends for 7 days from
+            July 17 to July 23 in the United States
+            and decide which movie is worth watching first.</p>
+
+        <div>
+            <!-- create two buttons to navigate to Barbie and Oppenheimer.html -->
+            <div class="flex flex-row items-center justify-center mt-4">
+                <button class="bg-pink-400 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full">
+                    <a href="Barbie.html">Barbie</a>
+                </button>
+                <button class="ml-2 bg-green-400 hover:bg-green-600  text-white font-bold py-2 px-4 rounded-full">
+                    <a href="Oppenheimer.html">Oppenheimer</a>
+                </button>
+                <button class="ml-2 bg-gray-500 hover:bg-gray-700  text-white font-bold py-2 px-4 rounded-full">
+                    <a href="Conclusion.html">Conclusion</a>
+                </button>
+            </div>
+
+            <div class="mt-10">
+                <div id="chart" class="chart-container pt-4 md:p-6 lg:p-8"></div>
+            </div>
+
+            <div id="chartTooltip" class="tooltip"></div>
+
+
+
+        </div>
+
+    </div>
+    <!-- align buttons inside div with forms in a row -->
+
+    <script src="timechart.js"></script>
+
+</body>
+
+</html

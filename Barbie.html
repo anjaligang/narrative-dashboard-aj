@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>What people say about Barbie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+
+</head>
+<style>
+    .tooltip {
+        background: #f0f0f0;
+        border: 1px solid #aaa;
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    #mapContainer {
+        width: 100%;
+        max-width: 800px;
+        /* Set a maximum width for better responsiveness */
+        margin: 0 auto;
+        /* Center the container horizontally */
+    }
+</style>
+
+<body style="background-color:beige;color:darkolivegreen">
+    <div class="flex flex-col items-center justify-center mt-4 w-full px-80 pt-20">
+        <h1 class="w-full text-4xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center text-pink-400">
+            Is Barbie Trending ?</h1>
+        <p class="pt-10 mx-30">"Barbie" is a delightful animated film that appeals to the young and the young-at-heart.
+            It takes
+            viewers on a colorful journey into a world of fantasy, where fairies, unicorns, and magical adventures
+            abound.
+            The animation is vibrant and visually stunning, immersing audiences in a captivating realm filled with
+            enchanting characters. The film's strong emphasis on friendship, courage, and self-belief resonates with its
+            target audience, delivering positive messages in a charming and entertaining manner. "Barbie" is a feel-good
+            movie that leaves you with a smile and reminds you of the power of imagination.
+        </p>
+
+        <p class="mt-5 font-bold">Lets compare Barbie search trend popularity accross the states of the US in 7 days
+            from July 17 to July 23.
+            Shades of pink represents popularity variation.(Light to dark : Less to More) </p>
+        <div class="mt-4 flex flex-row">
+            <!-- <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full">
+            <a href="Oppenheimer.html">Oppenheimer</a>
+        </button> -->
+            <button class="ml-2 bg-pink-400 hover:bg-pink-600  text-white font-bold py-2 px-4 rounded-full">
+                <a href="Home.html">← Home</a>
+            </button>
+        </div>
+
+        <div id="mapContainer"></div>
+        <script src="barbie-map.js"></script>
+</body>
+
+</html>
